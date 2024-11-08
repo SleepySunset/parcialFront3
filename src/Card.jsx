@@ -1,10 +1,25 @@
-//Este componente deberia recibir por props y mostrar en pantalla la informacion
-//que envia el usuario
+import { useState } from "react";
+import "./styles/Card.css"
 
-function Card() {
+function Card( {usuario, email, contrasena}) {
+  const [verDatos, setVerDatos] = useState(false);
+  const [texto, setTexto] = useState("Ver datos de login")
+  const handleData = () =>{
+    setVerDatos(!verDatos);
+    setTexto(verDatos ? "Ver datos de login" : "Ocultar datos")
+  }
   return (
-    <div>
-      <h2>Esto es un componente</h2>
+    <div className="card">
+      <h2 className="card-title">Hola {usuario}!</h2>
+      <p className="card-desc">Tu cuenta se ha creado satisfactoriamente</p>
+      <button className="card-btn" onClick={handleData}>{texto}</button>
+      {verDatos && (
+        <div>
+        <p>Tu email es {email}</p>
+        <p>Tu contraseña es {contrasena}</p>
+      </div>
+      )}
+      
     </div>
   );
 }

@@ -1,10 +1,12 @@
+import Form from "./Form";
+import "./styles/App.css"
+
 function App() {
-  //Aqui deberias agregar los estados y los handlers para los inputs
 
   return (
-    <div className="App">
-      <h1>Elige un color</h1>
-      <form>{/* aqui deberias escribir tu codigo */}</form>
+    <div className="app" >
+      <h1>Formulario de registro</h1>
+      <Form />
     </div>
   );
 }

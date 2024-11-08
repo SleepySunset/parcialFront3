@@ -1,0 +1,18 @@
+form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form-input{
+    background-color: white;
+    color:  rgba(48, 48, 48, 0.87);
+    padding: .3rem;
+}
